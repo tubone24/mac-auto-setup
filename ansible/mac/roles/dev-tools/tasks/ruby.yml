@@ -1,0 +1,35 @@
+---
+- name: 'Install rbenv'
+  homebrew:
+    name: 'rbenv'
+    state: 'present'
+
+- name: 'Install ruby-build'
+  homebrew:
+    name: 'ruby-build'
+    state: 'present'
+
+- name: 'Add PATH'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'export PATH="$HOME/.rbenv/bin:$PATH"'
+    - 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
+- name: 'Install Ruby 2.4.0'
+  shell: 'rbenv install 2.4.0'
+  ignore_errors: yes
+
+- name: 'Rehash rbenv'
+  shell: 'rbenv rehash'
+
+- name: 'Set Global ruby 2.4.0'
+  shell: 'rbenv global 2.4.0'
+
+
+
+

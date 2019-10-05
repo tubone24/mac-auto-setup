@@ -1,0 +1,8 @@
+---
+- include: 'tools.yml'
+- include: 'git.yml'
+- include: 'nodejs.yml'
+- include: 'terraform.yml'
+- include: 'python.yml'
+- include: 'ruby.yml'
+- include: 'docker.yml'

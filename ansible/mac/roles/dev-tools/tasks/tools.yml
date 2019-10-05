@@ -1,0 +1,9 @@
+---
+- name: 'Install Util tools'
+  homebrew:
+    name: '{{ item }}'
+    state: 'present'
+  with_items:
+    - 'awscli'
+    - 'packer'
+    - 'jq'

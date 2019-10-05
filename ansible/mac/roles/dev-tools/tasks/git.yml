@@ -1,0 +1,19 @@
+---
+- name: 'Install Git'
+  homebrew:
+    name: 'git'
+    state: 'present'
+
+- name: 'Show Git version'
+  shell: 'git --version'
+
+- name: 'Set git name'
+  shell: 'git config --global user.name "{{ git.name }}"'
+
+- name: 'Set git mail'
+  shell: 'git config --global user.email "{{ git.mail }}"'
+
+- name: 'Create SSH KEY'
+  shell: 'ssh-keygen -t rsa -f ~/.ssh/id_rsa'
+  ignore_errors: yes
+

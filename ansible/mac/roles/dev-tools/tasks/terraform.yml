@@ -1,0 +1,13 @@
+---
+- name: 'Install tfenv'
+  homebrew:
+    name: 'tfenv'
+    state: 'present'
+
+- name: 'Install Terraform 0.11.13'
+  shell: 'tfenv install 0.11.13'
+
+- name: 'Use Terraform 0.11.13'
+  shell: 'tfenv use 0.11.13'
+
+

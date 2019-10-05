@@ -1,0 +1,16 @@
+vars:
+  homebrew_packages:
+    - git
+    - nodenv
+    - pyenv
+    - pyenv-virtualenv
+    - rbenv
+    - ruby-build
+    - tfenv
+    - awscli
+    - packer
+    - jq
+    - docker
+  git_conf:
+    - tubone24
+    - tubo.yyyuuu@gmail.com
