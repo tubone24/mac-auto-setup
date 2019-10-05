@@ -5,12 +5,26 @@
 
 > Automation Env Setup tool for Mac
 
+Automation Environment setup tool for Mac using by Ansible provisioning and Serverspec checks.
 
-##
+## Table of Contents
 
-## 使う前に
 
-HomebrewとAnsibleを入れないと動かないのでそこまでは手動で入れます。
+## Background
+
+One day, every time I replaced my PC, I was getting tired of building my own familiar and useful PC environment.
+
+So that, I created an automatic environment setup tool for Mac with Ansible.
+
+
+## Install
+
+### System Requirements
+
+- XCode
+- Homebrew
+- Ansible
+- Ruby `v2.4.0 and more`
 
 Install Homebrew
 
