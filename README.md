@@ -1,6 +1,6 @@
 # Mac Automation Environment Setup Tool
 
-
+[![license](https://img.shields.io/github/license/:tubone24/:mac-auto-setup.svg)](LICENSE)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 > Automation Env Setup tool for Mac
@@ -98,3 +98,7 @@ It also supports Mac Homebrew.
 Server automated test tools using by Ruby run a pre-prepared test script to check if the server is configured to meet the desired requirements.
 
 You can check the command output and installation status.
+
+## License
+
+[MIT © tubone24](LICENSE)
