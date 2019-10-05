@@ -1,8 +1,12 @@
 # Mac Automation Environment Setup Tool
 
+
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+
 > Automation Env Setup tool for Mac
 
-## 
+
+##
 
 ## 使う前に
 
@@ -13,10 +17,10 @@ Install Homebrew
 ```
 # Install X-code
 $ xcode-select --install
- 
+
 # Install Homebrew
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
- 
+
 # Homebrew doctor: If error, Search by Google!
 $ brew doctor
 ```
