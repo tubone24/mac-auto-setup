@@ -26,10 +26,16 @@ So that, I created an automatic environment setup tool for Mac with Ansible.
 - Ansible
 - Ruby `v2.4.0 and more`
 
-Install Homebrew
+### Preconditions
+
+This tool used by Homebrew, Ansible and Serverspec.
+
+So, Install those apps before run this tool.
+
+#### Install XCode and Homebrew
 
 ```
-# Install X-code
+# Install XCode
 $ xcode-select --install
 
 # Install Homebrew
@@ -39,34 +45,56 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ brew doctor
 ```
 
-Install Ansible
+#### Install Ansible
 
 ```
 # Install Ansible
 $ brew install ansible
 ```
 
-## 動かし方
+#### Git User Config
+
+And also, Set `Git config` with 2 files.
+
+- Your name: git user name with commits
+- Your Email: git user email with commits
+
+ansible/mac/roles/dev-tools/vars/main.yml
+```
+---
+git:
+  name: "Your name"
+  mail: "Your Email"
+```
+
+serverspec/mac/variables.yml
+```
+  git_conf:
+    - Your name
+    - Your Email
+```
+
+## Usage
 
 ```
-# Macセットアップ
+# Setup your Mac with Ansible
 make setup TARGET=mac
 
-# 正しくインストール出来ているかチェック
+# Check your Mac with Serverspec
 make before-check TARGET=mac
 make check TARGET=mac
 ```
 
-## 利用技術
+## Other topics
 
 ### Ansible
 
-サーバのプロビジョニング自動化ツール。SSHで使うイメージが強いが、local Execという機能もある。
+Server provisioning automation tool. The image used in SSH is strong, but there is also a function called `local Exec`.
 
-MacのHomebrewにも対応している。
+It also supports Mac Homebrew.
 
 ### Serverspec
 
-Ruby製のサーバ設定情報チェックツール。
+Server automated test tools using by Ruby run a pre-prepared test script to check if the server is configured to meet the desired requirements.
 
-コマンドの出力結果やインストール状況を確認することができる。
+You can check the command output and installation status.
