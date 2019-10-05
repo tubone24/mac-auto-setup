@@ -9,6 +9,10 @@ Automation Environment setup tool for Mac using by Ansible provisioning and Serv
 
 ## Table of Contents
 
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [License](#license)
 
 ## Background
 
