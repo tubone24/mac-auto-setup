@@ -3,6 +3,8 @@
 [![license](https://img.shields.io/github/license/tubone24/mac-auto-setup.svg)](LICENSE)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
+![header](docs/images/header.png)
+
 > Automation Env Setup tool for Mac
 
 Automation Environment setup tool for Mac using by Ansible provisioning and Serverspec checks.
