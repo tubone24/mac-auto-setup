@@ -3,7 +3,7 @@ trigger:
 
 jobs:
 
-- job: Run Ansible and Serverspec
+- job: Run_Ansible_and_Serverspec
   pool:
     vmImage: 'macOS-10.13'
   steps:
