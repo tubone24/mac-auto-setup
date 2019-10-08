@@ -8,6 +8,7 @@ jobs:
     vmImage: 'macOS-10.13'
   steps:
   - script: echo MacOSX
+  - script: which node
   - task: UseRubyVersion@0
     inputs:
       versionSpec: '>= 2.4'
