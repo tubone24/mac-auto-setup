@@ -92,7 +92,13 @@ make before-check TARGET=mac
 make check TARGET=mac
 ```
 
-## Other topics
+## CI
+
+This repo is integrated with Azure Develop Pipeline.
+
+Run the Ansible playbook and the Serverspec on MacOSX Mojave.
+
+## Technically Tips
 
 ### Ansible
 
