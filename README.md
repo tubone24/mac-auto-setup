@@ -94,9 +94,13 @@ make check TARGET=mac
 
 ## CI
 
-This repo is integrated with Azure Develop Pipeline.
+This repo is integrated with [Azure Develop Pipeline](https://dev.azure.com/meitantei-conan/mac-auto-setup/_build?definitionId=2&_a=summary).
 
 Run the Ansible playbook and the Serverspec on MacOSX Mojave.
+
+The badge below shows **Build Status**.
+
+[![Build Status](https://dev.azure.com/meitantei-conan/mac-auto-setup/_apis/build/status/tubone24.mac-auto-setup?branchName=master)](https://dev.azure.com/meitantei-conan/mac-auto-setup/_build/latest?definitionId=2&branchName=master)
 
 ## Technically Tips
 
