@@ -1,0 +1,30 @@
+trigger:
+- master
+
+jobs:
+
+- job: Run Ansible and Serverspec
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - script: echo MacOSX
+  - task: UseRubyVersion@0
+    inputs:
+      versionSpec: '>= 2.4'
+
+  - script: |
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      brew install ansible
+    displayName: 'Install Ansible'
+    
+  - script: |
+      make setup TARGET=mac
+    displayName: 'Run Ansible'
+    
+  - script: |
+      make before-check TARGET=mac
+    displayName: 'Before Run Serverspec'
+
+  - script: |
+      make check TARGET=mac
+    displayName: 'Run Serverspec'
