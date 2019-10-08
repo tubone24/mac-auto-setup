@@ -11,6 +11,10 @@ jobs:
     inputs:
       versionSpec: '>= 2.4'
 
+  - task: NodeTool@0 
+    inputs:
+      versionSpec: '10.15.3'
+
   - script: |
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       brew install ansible
