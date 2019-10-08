@@ -2,6 +2,7 @@
 
 [![license](https://img.shields.io/github/license/tubone24/mac-auto-setup.svg)](LICENSE)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Build Status](https://dev.azure.com/meitantei-conan/mac-auto-setup/_apis/build/status/tubone24.mac-auto-setup?branchName=master)](https://dev.azure.com/meitantei-conan/mac-auto-setup/_build/latest?definitionId=2&branchName=master)
 
 ![header](docs/images/header.png)
 
