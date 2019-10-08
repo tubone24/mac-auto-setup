@@ -5,7 +5,7 @@ jobs:
 
 - job: Run_Ansible_and_Serverspec
   pool:
-    vmImage: 'macOS-10.13'
+    vmImage: 'macOS-10.14'
   steps:
   - task: UseRubyVersion@0
     inputs:
