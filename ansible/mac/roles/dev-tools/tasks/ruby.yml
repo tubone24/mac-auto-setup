@@ -20,11 +20,9 @@
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
-- name: 'Install openssl'
-  homebrew:
-    name: 'openssl'
-    state: 'present'
-  
+- name: 'xcodebuild license'
+  shell: 'xcodebuild -license'
+
 - name: 'Install Ruby 2.4.0'
   shell: 'rbenv install 2.4.0'
   ignore_errors: yes
