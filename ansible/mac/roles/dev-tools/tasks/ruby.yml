@@ -43,6 +43,8 @@
 
 - name: 'Set Global ruby 2.4.0'
   shell: 'rbenv global 2.4.0'
+  ignore_errors: yes
+
 
 
 
