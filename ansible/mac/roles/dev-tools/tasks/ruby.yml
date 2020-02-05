@@ -21,6 +21,7 @@
   shell: 'source ~/.bash_profile'
 
 - name: 'xcodebuild license'
+  become: yes
   shell: 'xcodebuild -license'
 
 - name: 'Install Ruby 2.4.0'
