@@ -22,6 +22,7 @@
   homebrew:
     name: 'openssl'
     state: 'present'
+    update_homebrew: yes
     
 - name: 'check openssl'
   shell: 'brew list openssl'
