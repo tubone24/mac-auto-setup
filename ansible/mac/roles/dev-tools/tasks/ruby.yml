@@ -23,6 +23,9 @@
     name: 'openssl'
     state: 'present'
     
+- name: 'check openssl'
+  shell: 'brew list openssl'
+  
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
