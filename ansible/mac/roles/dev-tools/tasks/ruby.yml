@@ -25,6 +25,10 @@
     
 - name: 'check openssl'
   shell: 'brew list openssl'
+  register: result
+  
+- name: 'debug'
+  debug: var=result
   
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
