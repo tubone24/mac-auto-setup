@@ -16,7 +16,7 @@
   with_items:
     - 'export PATH="$HOME/.rbenv/bin:$PATH"'
     - 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
-    - 'export PATH=/usr/local/opt/openssl/bin:$PATH'
+    - 'export PATH=/usr/local/Cellar/openssl/1.0.2t/bin:$PATH'
 
 - name: 'Install openssl'
   homebrew:
