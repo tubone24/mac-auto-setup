@@ -16,13 +16,15 @@
   with_items:
     - 'export PATH="$HOME/.rbenv/bin:$PATH"'
     - 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
+    - 'export PATH=/usr/local/opt/openssl/bin:$PATH'
 
+- name: 'Install openssl'
+  homebrew:
+    name: 'openssl'
+    state: 'present'
+    
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
-
-- name: 'xcodebuild license'
-  become: yes
-  shell: 'xcodebuild -license'
 
 - name: 'Install Ruby 2.4.0'
   shell: 'rbenv install 2.4.0'
