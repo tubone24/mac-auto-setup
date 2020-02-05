@@ -9,7 +9,7 @@ jobs:
   steps:
   - task: UseRubyVersion@0
     inputs:
-      versionSpec: '>= 2.4'
+      versionSpec: '== 2.4'
 
   - task: NodeTool@0 
     inputs:
