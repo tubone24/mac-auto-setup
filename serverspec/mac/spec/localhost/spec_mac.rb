@@ -41,7 +41,7 @@ describe command('docker --version') do
 end
 
 describe command('go version') do
-  its(:stdout) { should match /1.11/ }
+  its(:stdout) { should match /1.14.3/ }
 end
 
 describe command('gradle -v') do
