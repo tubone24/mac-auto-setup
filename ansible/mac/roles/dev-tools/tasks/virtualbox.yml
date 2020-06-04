@@ -1,0 +1,10 @@
+---
+- name: 'Install Virtualbox'
+  homebrew_cask:
+    name: 'virtualbox'
+    state: 'present'
+
+- name: 'Install vagrant'
+  homebrew_cask:
+    name: 'vagrant'
+    state: 'present'
