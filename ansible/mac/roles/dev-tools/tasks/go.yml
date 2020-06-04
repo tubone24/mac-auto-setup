@@ -27,6 +27,8 @@
 
 - name: 'Install go 1.11.4'
   shell: 'goenv install 1.11.4'
+  ignore_errors: yes
 
 - name: 'enable global go 1.11.4'
   shell: 'goenv global 1.11.4'
+  ignore_errors: yes
