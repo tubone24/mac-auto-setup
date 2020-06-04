@@ -11,3 +11,4 @@
     - 'tmux'
     - 'peco'
     - 'wget'
+    - 'zplug'
