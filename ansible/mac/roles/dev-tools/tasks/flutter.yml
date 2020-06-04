@@ -1,4 +1,7 @@
 ---
+- name: 'rm flutter dir'
+  shell: 'rm -rf ~/flutter.zip'
+  
 - name: 'Download Flutter'
   get_url:
     url: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.2-stable.zip
