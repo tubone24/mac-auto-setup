@@ -16,3 +16,4 @@
 - include: 'chrome.yml'
 - include: 'editor.yml'
 - include: 'postman.yml'
+- include: 'flutter.yml'
