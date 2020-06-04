@@ -13,3 +13,5 @@
 - include: 'slack.yml'
 - include: 'virtualbox.yml'
 - include: 'iterm2.yml'
+- include: 'chrome.yml'
+- include: 'editor.yml'
