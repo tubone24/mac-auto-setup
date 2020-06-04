@@ -7,12 +7,12 @@
     url: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.2-stable.zip
     dest: ~/flutter.zip
 
-- name: 'Unzip flutter'
-  shell: 'unzip ~/flutter.zip'
+# - name: 'Unzip flutter'
+#   shell: 'unzip ~/flutter.zip'
   
-- name: 'Add Flutter PATH'
-  lineinfile:
-    dest: '~/.bash_profile'
-    line: '{{ item }}'
-  with_items:
-    - 'export PATH="$PATH:~/flutter/bin"'
+# - name: 'Add Flutter PATH'
+#   lineinfile:
+#     dest: '~/.bash_profile'
+#     line: '{{ item }}'
+#   with_items:
+#     - 'export PATH="$PATH:~/flutter/bin"'
