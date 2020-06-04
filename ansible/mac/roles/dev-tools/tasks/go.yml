@@ -1,0 +1,32 @@
+---
+- name: 'Install goenv'
+  homebrew:
+    name: 'goenv'
+    state: 'present'
+
+- name: 'Add GOPATH'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'export GOPATH=$HOME/go'
+    - 'export PATH=$GOPATH/bin:$PATH'
+
+- name: 'Add goenv PATH'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'export GOENV_ROOT=$HOME/.goenv'
+    - 'export PATH=$GOENV_ROOT/bin:$PATH'
+    - 'export PATH=$HOME/.goenv/bin:$PATH'
+    - 'eval "$(goenv init -)"'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
+- name: 'Install go 1.11.4'
+  shell: 'goenv install 1.11.4'
+
+- name: 'enable global go 1.11.4'
+  shell: 'goenv global 1.11.4'

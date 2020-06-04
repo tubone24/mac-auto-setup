@@ -39,3 +39,7 @@ end
 describe command('docker --version') do
   its(:stdout) { should match /Docker version/ }
 end
+
+describe command('go version') do
+  its(:stdout) { should match /1.11.4/ }
+end
