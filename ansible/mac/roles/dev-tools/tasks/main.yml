@@ -15,3 +15,4 @@
 - include: 'iterm2.yml'
 - include: 'chrome.yml'
 - include: 'editor.yml'
+- include: 'postman.yml'
