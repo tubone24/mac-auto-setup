@@ -1,0 +1,5 @@
+---
+- name: 'Install Google Japanese IME'
+  homebrew_cask:
+    name: 'google-japanese-ime'
+    state: 'present'
