@@ -8,6 +8,7 @@ setup:
 
 before-check:
 	@${CD_SERVERSPEC} && \
+	bundle update --bundler && \
 	bundle install --path=vendor/bundle
 
 check:
