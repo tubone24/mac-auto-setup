@@ -1,0 +1,12 @@
+---
+- name: 'Install mas'
+  homebrew:
+    name: 'mas'
+    state: 'present'
+
+- name: mas install
+  script: 'ansible/mac/scripts/mas.sh {{ item.id }}'
+  with_items: '{{ mas_apps }}'
+  register: result
+  changed_when: result.rc == 1
+  failed_when: result.rc not in [0, 1]
