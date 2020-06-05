@@ -4,6 +4,11 @@
     path: ~/flutter
     state: absent
 
+- name: rm flutter zip
+  file:
+    path: ~/flutter.zip
+    state: absent
+
 - name: Download Flutter
   unarchive:
     src: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.2-stable.zip
