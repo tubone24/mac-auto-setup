@@ -8,5 +8,5 @@
   script: 'ansible/mac/scripts/mas.sh {{ item.id }}'
   with_items: '{{ mas_apps }}'
   register: result
-  changed_when: result.rc == 1
-  failed_when: result.rc not in [0, 1]
+  changed_when: result is succeeded
+  failed_when: result is not succeeded

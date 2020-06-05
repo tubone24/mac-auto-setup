@@ -12,4 +12,4 @@ mas list 2> /dev/null | grep -q "^${APPID} " && exit 0
 mas install ${APPID} > /dev/null 2>&1 || exit 3
 
 ## Normal termination
-exit 1
+exit 0
