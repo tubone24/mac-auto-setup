@@ -1,5 +1,5 @@
 ---
 - name: 'Install Remote Desktop'
   homebrew_cask:
-    name: 'remote-desktop-connection'
+    name: 'microsoft-remote-desktop'
     state: 'present'
