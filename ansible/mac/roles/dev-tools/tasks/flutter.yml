@@ -9,6 +9,12 @@
     path: ~/flutter.zip
     state: absent
 
+- name: Create a flutter directory if it does not exist
+  file:
+    path: ~/flutter
+    state: directory
+    mode: '0755'
+
 - name: Download Flutter
   unarchive:
     src: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.2-stable.zip
