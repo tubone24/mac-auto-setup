@@ -19,4 +19,4 @@
 - include: 'flutter.yml'
 - include: 'gui_archiver.yml'
 # - include: 'dash.yml'
-- include: 'remote_desktop.yml'
+- include: 'mas.yml'

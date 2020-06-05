@@ -2,3 +2,7 @@
 git:
   name: "tubone24"
   mail: "tubo.yyyuuu@gmail.com"
+
+mas_apps:
+  - id: 1295203466
+    name: 'Microsoft Remote Desktop'
