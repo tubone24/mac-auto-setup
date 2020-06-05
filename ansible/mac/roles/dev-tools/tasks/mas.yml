@@ -5,7 +5,7 @@
     state: 'present'
 
 - name: mas install
-  script: 'ansible/mac/scripts/mas.sh {{ item.id }}'
+  script: 'mas.sh {{ item.id }}'
   with_items: '{{ mas_apps }}'
   register: result
   changed_when: result is succeeded
