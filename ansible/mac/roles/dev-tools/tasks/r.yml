@@ -1,0 +1,5 @@
+---
+- name: 'Install R'
+  homebrew_cask:
+    name: 'r'
+    state: 'present'

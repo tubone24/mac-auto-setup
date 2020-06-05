@@ -14,3 +14,5 @@
     - 'zplug'
     - 'reattach-to-user-namespace'
     - 'coreutils'
+    - 'tree'
+    - 'q'
