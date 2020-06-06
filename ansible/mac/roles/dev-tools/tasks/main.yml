@@ -1,4 +1,5 @@
 ---
+- include: 'mac_default_write.yml'
 - include: 'tools.yml'
 - include: 'git.yml'
 - include: 'nodejs.yml'

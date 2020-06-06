@@ -1,0 +1,39 @@
+---
+- name: 'disable screenshot shadow'
+  shell: 'defaults write com.apple.screencapture “disable-shadow” -bool yes'
+
+- name: 'disable Dock Anime'
+  shell: 'defaults write com.apple.dock autohide-time-modifier -int 0'
+
+- name: 'disable Dock Anime'
+  shell: 'defaults write com.apple.dock autohide -bool true'
+
+- name: 'wipe mission controll & expose'
+  shell: 'defaults write com.apple.dock showMissionControlGestureEnabled -bool true;defaults write com.apple.dock showAppExposeGestureEnabled -bool true;defaults write com.apple.dock showDesktopGestureEnabled -bool true;defaults write com.apple.dock showLaunchpadGestureEnabled -bool true'
+
+- name: 'Automatically hide or show the Dock'
+  shell: 'defaults write com.apple.dock autohide -bool true'
+
+- name: 'Finder show tab'
+  shell: 'defaults write com.apple.finder ShowTabView -bool true'
+
+- name: 'Finder show path-bar'
+  shell: 'defaults write com.apple.finder ShowPathbar -bool true'
+
+- name: 'Disable Finder opening directory Anime'
+  shell: 'defaults write com.apple.finder AnimateWindowZoom -bool false'
+
+- name: 'Click when tapped'
+  shell: 'defaults write -g com.apple.mouse.tapBehavior -int 1'
+
+- name: 'status bar clock show sec and days'
+  shell: "defaults write com.apple.menuextra.clock DateFormat -string 'EEE d MMM HH:mm:ss'"
+
+- name: 'Add battery percentage'
+  shell: 'defaults write com.apple.menuextra.battery ShowPercent -string "YES"'
+
+- name: 'killall SystemUIServer'
+  shell: 'killall SystemUIServer'
+
+- name: 'Kill Dock'
+  shell: 'killall Dock'
