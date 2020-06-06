@@ -22,3 +22,4 @@
 - include: 'mas.yml'
 - include: 'lua.yml'
 - include: 'font.yml'
+- include: 'app_cleaner.yml'
