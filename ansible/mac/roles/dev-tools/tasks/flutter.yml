@@ -18,7 +18,7 @@
 - name: Download Flutter
   unarchive:
     src: https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_1.17.2-stable.zip
-    dest: ~/flutter
+    dest: ~/
     remote_src: yes
   
 - name: 'Add Flutter PATH'
@@ -27,3 +27,6 @@
     line: '{{ item }}'
   with_items:
     - 'export PATH="$PATH:~/flutter/bin"'
+
+- name: 'Flutter precache'
+  shell: 'flutter precache'

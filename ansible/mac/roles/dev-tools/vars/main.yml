@@ -8,3 +8,9 @@ mas_apps:
     name: 'Microsoft Remote Desktop'
   - id: 425955336
     name: 'Skitch'
+  - id: 414855915
+    name: 'WinArchiver Lite'
+  - id: 490461369
+    name: 'Bandwidth+'
+  - id: 883070818
+    name: 'SafeInCloud'

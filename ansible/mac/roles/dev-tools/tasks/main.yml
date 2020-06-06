@@ -26,3 +26,4 @@
 - include: 'rust.yml'
 - include: 'asdf.yml'
 - include: 'elixir.yml'
+- include: 'drone.yml'

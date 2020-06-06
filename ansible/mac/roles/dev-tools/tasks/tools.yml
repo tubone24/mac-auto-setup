@@ -30,3 +30,6 @@
     - 'libxslt'
     - 'libtool'
     - 'unixodbc'
+    - 'mycli'
+    - 'the_silver_searcher'
+    - 'tcptraceroute'

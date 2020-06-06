@@ -1,0 +1,9 @@
+---
+- name: 'Tap drone/drone'
+  homebrew_tap:
+    name: drone/drone
+
+- name: 'Install Drone-CLI'
+  homebrew:
+    name: 'drone'
+    state: 'present'
