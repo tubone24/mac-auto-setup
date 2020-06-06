@@ -6,3 +6,5 @@ git:
 mas_apps:
   - id: 1295203466
     name: 'Microsoft Remote Desktop'
+  - id: 425955336
+    name: 'Skitch'
