@@ -1,5 +1,5 @@
 ---
-- name: 'Install VS the-unarchiver'
+- name: 'Install The Unarchiver'
   homebrew_cask:
     name: 'the-unarchiver'
     state: 'present'

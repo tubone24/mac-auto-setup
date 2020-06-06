@@ -1,0 +1,5 @@
+---
+- name: 'Install Rust'
+  homebrew:
+    name: 'rust'
+    state: 'present'

@@ -8,3 +8,8 @@
   homebrew:
     name: 'neovim'
     state: 'present'
+
+- name: 'Install CotEditor'
+  homebrew_cask:
+    name: 'coteditor'
+    state: 'present'

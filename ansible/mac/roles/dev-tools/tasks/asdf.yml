@@ -1,0 +1,17 @@
+---
+- name: 'Install asdf'
+  homebrew:
+    name: 'asdf'
+    state: 'present'
+
+#- name: 'clone asdf repo'
+#  git:
+#    repo: https://github.com/asdf-vm/asdf.git
+#    dest: ~/.asdf
+
+- name: 'Add asdf.sh'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - '. $(brew --prefix asdf)/asdf.sh'

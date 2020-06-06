@@ -1,0 +1,25 @@
+---
+- name: 'Plugin Erlang asdf'
+  shell: 'asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git'
+  ignore_errors: yes
+
+- name: 'Plugin Elixir asdf'
+  shell: 'asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git'
+  ignore_errors: yes
+
+# 時間がかかりすぎてエラーになるかも
+- name: 'Install Erlang 21.1'
+  shell: 'asdf install erlang 21.1'
+  ignore_errors: yes
+
+- name: 'Install Elixir 1.7.4'
+  shell: 'asdf install elixir 1.7.4'
+  ignore_errors: yes
+
+- name: 'Enable Erlang 21.1'
+  shell: 'asdf global erlang 21.1 & asdf reshim erlang'
+  ignore_errors: yes
+
+- name: 'Enable Elixir 1.7.4'
+  shell: 'asdf global elixir 1.7.4 & asdf reshim elixir'
+  ignore_errors: yes
