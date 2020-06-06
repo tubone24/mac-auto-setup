@@ -1,0 +1,15 @@
+---
+- name: 'Tap sanemat/font'
+  homebrew_tap:
+    name: sanemat/font
+
+- name: 'Install Ricty'
+  homebrew:
+    name: 'ricty'
+    state: 'present'
+
+- name: 'copy Ricty to Library/Font'
+  shell: 'cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/'
+
+- name: 'Font Cache'
+  shell: 'fc-cache -vf'

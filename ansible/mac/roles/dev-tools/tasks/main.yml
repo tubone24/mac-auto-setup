@@ -21,3 +21,4 @@
 # - include: 'dash.yml'
 - include: 'mas.yml'
 - include: 'lua.yml'
+- include: 'font.yml'
