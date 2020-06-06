@@ -27,4 +27,5 @@
 - include: 'elixir.yml'
 - include: 'drone.yml'
 - include: 'nim.yml'
+- include: 'alfred.yml'
 - include: 'mas.yml'
