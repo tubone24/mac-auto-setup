@@ -20,3 +20,4 @@
 - include: 'gui_archiver.yml'
 # - include: 'dash.yml'
 - include: 'mas.yml'
+- include: 'lua.yml'
