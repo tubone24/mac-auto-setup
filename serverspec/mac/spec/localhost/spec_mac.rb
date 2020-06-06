@@ -41,9 +41,17 @@ describe command('docker --version') do
 end
 
 describe command('go version') do
-  its(:stdout) { should match /1.14.3/ }
+  its(:stdout) { should match /1.11.4/ }
 end
 
 describe command('gradle -v') do
   its(:stdout) { should match /Gradle/ }
+end
+
+describe command('asdf current erlang') do
+  its(:stdout) { should match /21.1/ }
+end
+
+describe command('asdf current elixir') do
+  its(:stdout) { should match /1.7.4/ }
 end
