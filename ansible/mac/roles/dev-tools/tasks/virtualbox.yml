@@ -8,3 +8,6 @@
   homebrew_cask:
     name: 'vagrant'
     state: 'present'
+
+- name: 'Install sahara'
+  shell: 'vagrant plugin install sahara'
