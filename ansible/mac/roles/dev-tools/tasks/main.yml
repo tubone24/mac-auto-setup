@@ -29,4 +29,4 @@
 - include: 'drone.yml'
 - include: 'nim.yml'
 - include: 'alfred.yml'
-- include: 'mas.yml'
+# - include: 'mas.yml' # comment out because failed CI
