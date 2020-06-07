@@ -12,8 +12,8 @@
   copy:
     src: "{{ item }}"
     dest: '~/Library/Fonts/'
-    with_fileglob:
-      - '/usr/local/opt/ricty/share/fonts/Ricty*.ttf'
+  with_fileglob:
+    - '/usr/local/opt/ricty/share/fonts/Ricty*.ttf'
 
 - name: 'Font Cache'
   shell: 'fc-cache -vf'
