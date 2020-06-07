@@ -10,7 +10,7 @@
 
 - name: 'copy Ricty to Library/Font'
   copy:
-    src: {{ item }
+    src: "{{ item }}"
     dest: '~/Library/Fonts/'
     with_fileglob:
       - '/usr/local/opt/ricty/share/fonts/Ricty*.ttf'
