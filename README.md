@@ -119,3 +119,57 @@ You can check the command output and installation status.
 ## License
 
 [MIT © tubone24](LICENSE)
+
+## Install Apps
+- Alfred
+- asdf-vm
+- AppCleaner
+- Google Chrome
+- Dash(now not implement because of SSL Error)
+- Docker
+- Drone-CLI
+- Microsoft Visual Studio Code
+- Neovim
+- CotEditor
+- Elixir(via asdf-vm)
+- Erlang(via asdf-vm)
+- ffmpeg
+- Flutter
+- Ricty
+- Git
+- Go(via Goenv)
+- Google日本語入力
+- Gradle
+- The Unarchiver
+- IntellJ
+- iTerm2
+- Lua
+- Nim
+- Node.js(via nodenv)
+- Postman
+- Python(via Pyenv, virtual-env)
+- R
+- Ruby(via Rbenv)
+- Rust
+- Slack
+- Terraform(via Tfenv)
+- VirtualBox(Vagrant)
+- AWS-CLI
+- AWS-EB-CLI
+- Packer
+- jq
+- zsh
+- tmux
+- peco
+- wget
+- zplug
+- coreutils
+- tree
+- q
+- htop
+- editorconfig
+- figret
+- nmap
+- mycli
+- The Silver Searcher(ag)
+- TCP Trace Route
