@@ -9,7 +9,11 @@
     state: 'present'
 
 - name: 'copy Ricty to Library/Font'
-  shell: 'cp -f /usr/local/opt/ricty/share/fonts/Ricty*.ttf ~/Library/Fonts/'
+  copy:
+    src: {{ item }
+    dest: '~/Library/Fonts/'
+    with_fileglob:
+      - '/usr/local/opt/ricty/share/fonts/Ricty*.ttf'
 
 - name: 'Font Cache'
   shell: 'fc-cache -vf'
