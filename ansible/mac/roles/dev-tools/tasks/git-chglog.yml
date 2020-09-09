@@ -1,0 +1,9 @@
+---
+- name: 'Tap git-chglog/git-chglog'
+  homebrew_tap:
+    name: git-chglog/git-chglog
+
+- name: 'Install Git Chglog'
+  homebrew:
+    name: 'git-chglog'
+    state: 'present'
