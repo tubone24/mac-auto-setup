@@ -26,7 +26,7 @@
 - include: 'rust.yml'
 - include: 'asdf.yml'
 - include: 'elixir.yml'
-- include: 'drone.yml'
+# - include: 'drone.yml' # not use
 - include: 'nim.yml'
 - include: 'alfred.yml'
 - include: 'git-chglog.yml'
