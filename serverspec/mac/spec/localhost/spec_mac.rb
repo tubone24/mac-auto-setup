@@ -48,10 +48,10 @@ describe command('gradle -v') do
   its(:stdout) { should match /Gradle/ }
 end
 
-describe command('asdf current erlang') do
-  its(:stdout) { should match /21.1/ }
-end
+# describe command('asdf current erlang') do
+#   its(:stdout) { should match /21.1/ }
+# end
 
-describe command('asdf current elixir') do
-  its(:stdout) { should match /1.7.4/ }
-end
+# describe command('asdf current elixir') do
+#   its(:stdout) { should match /1.7.4/ }
+# end
