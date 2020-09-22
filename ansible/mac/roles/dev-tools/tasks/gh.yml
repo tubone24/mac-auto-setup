@@ -1,0 +1,5 @@
+---
+- name: 'Install GitHub CLI'
+  homebrew:
+    name: 'gh'
+    state: 'present'
