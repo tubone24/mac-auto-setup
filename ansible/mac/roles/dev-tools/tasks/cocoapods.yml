@@ -1,0 +1,5 @@
+---
+- name: 'Install Cocoapods'
+  homebrew:
+    name: 'cocoapods'
+    state: 'present'

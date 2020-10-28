@@ -31,4 +31,6 @@
 - include: 'alfred.yml'
 - include: 'git-chglog.yml'
 - include: 'gh.yml'
+- include: 'cocoapods.yml'
+- include: 'dbeaver.yml'
 # - include: 'mas.yml' # comment out because failed CI
