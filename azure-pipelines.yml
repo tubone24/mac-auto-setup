@@ -6,8 +6,8 @@ jobs:
 - job: Run_Ansible_and_Serverspec
   strategy:
     matrix:
-      macMojave:
-        imageName: 'macOS-10.14'
+      # macMojave: # 動かない！
+      #   imageName: 'macOS-10.14'
       macCatalina:
         imageName: 'macOS-10.15'
   pool:
