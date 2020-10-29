@@ -4,8 +4,14 @@ trigger:
 jobs:
 
 - job: Run_Ansible_and_Serverspec
+  strategy:
+    matrix:
+      macMojave:
+        imageName: 'macOS-10.14'
+      macCatalina:
+        imageName: 'macOS-10.15'
   pool:
-    vmImage: 'macOS-10.14'
+    vmImage: $(imageName)
   steps:
   - task: UseRubyVersion@0
     inputs:

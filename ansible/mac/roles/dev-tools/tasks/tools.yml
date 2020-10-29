@@ -24,7 +24,7 @@
     - 'mtr'
     - 'automake'
     - 'autoconf'
-    - 'openssl'
+    - 'openssl@1.1'
     - 'libyaml'
     - 'readline'
     - 'libxslt'
