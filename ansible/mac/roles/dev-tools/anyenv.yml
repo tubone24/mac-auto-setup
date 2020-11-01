@@ -1,11 +1,14 @@
 ---
-# - name: 'Install pyenv'
-#   homebrew:
-#     name: 'pyenv'
-#     state: 'present'
+- name: 'Install anyenv'
+  homebrew:
+    name: 'anyenv'
+    state: 'present'
 
-- name: 'Install pyenv with anyenv'
-  shell: 'anyenv install pyenv'
+- name: 'init anyenv'
+  shell: 'anyenv init'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
 
 - name: 'Install pyenv-virtualenv'
   homebrew:
@@ -39,7 +42,3 @@
 - name: 'Install Python 3.6.1'
   shell: 'pyenv virtualenv 3.6.1 py361'
   ignore_errors: yes
-
-
-
-

@@ -1,8 +1,11 @@
 ---
-- name: 'Install nodenv'
-  homebrew:
-    name: 'nodenv'
-    state: 'present'
+# - name: 'Install nodenv'
+#   homebrew:
+#     name: 'nodenv'
+#     state: 'present'
+
+- name: 'Install nodenv with anyenv'
+  shell: 'anyenv install nodenv'
 
 - name: 'Setup nodenv'
   lineinfile:

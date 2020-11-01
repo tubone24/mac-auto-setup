@@ -1,8 +1,11 @@
 ---
-- name: 'Install goenv'
-  homebrew:
-    name: 'goenv'
-    state: 'present'
+# - name: 'Install goenv'
+#   homebrew:
+#     name: 'goenv'
+#     state: 'present'
+
+- name: 'Install goenv with anyenv'
+  shell: 'anyenv install goenv'
 
 - name: 'Add GOPATH'
   lineinfile:

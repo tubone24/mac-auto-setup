@@ -1,0 +1,21 @@
+---
+- name: 'Install anyenv'
+  homebrew:
+    name: 'anyenv'
+    state: 'present'
+
+# - name: 'clone anyenv'
+#   git:
+#     repo: 'https://github.com/anyenv/anyenv.git'
+#     dest: ~/.anyenv
+
+- name: 'Add anyenv init'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    # - 'export PATH="$HOME/.anyenv/bin:$PATH"'
+    - 'eval "$(anyenv init -)"'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
