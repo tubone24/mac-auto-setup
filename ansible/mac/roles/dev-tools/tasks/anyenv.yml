@@ -27,4 +27,4 @@
   shell: 'source ~/.bash_profile'
 
 - name: 'anyenv init'
-  shell: 'anyenv install '
+  shell: 'anyenv install --force-init'
