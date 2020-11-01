@@ -6,20 +6,9 @@
 
 - name: 'Install nodenv with anyenv'
   shell: 'anyenv install nodenv'
-  register: result
-- name: 'debug'
-  debug: var=result
-
 
 - name: 'restart shell'
-  shell: 'echo $SHELL'
-
-- name: 'env'
-  shell: 'env'
-  register: result
-  
-- name: 'debug'
-  debug: var=result
+  shell: 'exec $SHELL -l'
 
 - name: 'Setup nodenv'
   lineinfile:

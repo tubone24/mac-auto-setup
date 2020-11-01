@@ -9,16 +9,22 @@
 #     repo: 'https://github.com/anyenv/anyenv.git'
 #     dest: ~/.anyenv
 
-- name: 'Add anyenv init'
-  lineinfile:
+- name: 'Setup anyenv'
+  blockinfile:
     dest: '~/.bash_profile'
-    line: '{{ item }}'
-  with_items:
-    # - 'export PATH="$HOME/.anyenv/bin:$PATH"'
-    - 'eval "$(anyenv init -)"'
+    block: |
+      if [ -e "$HOME/.anyenv" ]
+      then
+        export ANYENV_ROOT="$HOME/.anyenv"
+        export PATH="$ANYENV_ROOT/bin:$PATH"
+        if command -v anyenv 1>/dev/null 2>&1
+        then
+          eval "$(anyenv init -)"
+        fi
+      fi
 
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
 - name: 'anyenv init'
-  shell: 'anyenv install --force-init'
+  shell: 'anyenv install '
