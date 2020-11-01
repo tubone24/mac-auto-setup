@@ -22,6 +22,16 @@
     name: 'wxWidgets'
     state: 'present'
 
+- name: 'Install unixodbc'
+  homebrew:
+    name: 'unixodbc'
+    state: 'present'
+
+- name: 'Install wxmac'
+  homebrew:
+    name: 'wxmac'
+    state: 'present'
+
 - name: 'Plugin Erlang asdf'
   shell: 'asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git'
   ignore_errors: yes
