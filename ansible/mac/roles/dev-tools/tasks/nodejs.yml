@@ -7,6 +7,9 @@
 - name: 'Install nodenv with anyenv'
   shell: 'anyenv install nodenv'
 
+- name: 'restart shell'
+  shell: 'exec $SHELL -l'
+
 - name: 'Setup nodenv'
   lineinfile:
     dest: '~/.bash_profile'
