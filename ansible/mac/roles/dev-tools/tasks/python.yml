@@ -1,11 +1,11 @@
 ---
-# - name: 'Install pyenv'
-#   homebrew:
-#     name: 'pyenv'
-#     state: 'present'
+- name: 'Install pyenv'
+  homebrew:
+    name: 'pyenv'
+    state: 'present'
 
-- name: 'Install pyenv with anyenv'
-  shell: 'anyenv install pyenv'
+# - name: 'Install pyenv with anyenv'
+#   shell: 'anyenv install pyenv'
 
 - name: 'Install pyenv-virtualenv'
   homebrew:
