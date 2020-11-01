@@ -25,7 +25,7 @@
 - include: 'app_cleaner.yml'
 - include: 'rust.yml'
 - include: 'asdf.yml'
-# - include: 'elixir.yml' # 何故かコケる
+- include: 'elixir.yml'
 # - include: 'drone.yml' # not use
 - include: 'nim.yml'
 - include: 'alfred.yml'
