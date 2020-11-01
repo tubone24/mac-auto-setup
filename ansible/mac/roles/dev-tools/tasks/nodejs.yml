@@ -10,6 +10,13 @@
 - name: 'restart shell'
   shell: 'exec $SHELL -l'
 
+- name: 'env'
+  shell: 'env'
+  register: result
+  
+- name: 'debug'
+  debug: var=result
+
 - name: 'Setup nodenv'
   lineinfile:
     dest: '~/.bash_profile'
