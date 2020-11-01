@@ -12,6 +12,11 @@
 #     - 'export PATH="$HOME/.erlenv/bin:$PATH"'
 
 # for use asdf
+- name: 'Install fop'
+  homebrew:
+    name: 'fop'
+    state: 'present'
+
 - name: 'Plugin Erlang asdf'
   shell: 'asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git'
   ignore_errors: yes
