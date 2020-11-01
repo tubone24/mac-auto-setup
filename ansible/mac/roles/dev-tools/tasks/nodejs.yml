@@ -1,14 +1,14 @@
 ---
-# - name: 'Install nodenv'
-#   homebrew:
-#     name: 'nodenv'
-#     state: 'present'
+- name: 'Install nodenv'
+  homebrew:
+    name: 'nodenv'
+    state: 'present'
 
-- name: 'Install nodenv with anyenv'
-  shell: 'anyenv install nodenv'
+# - name: 'Install nodenv with anyenv'
+#   shell: 'anyenv install nodenv'
 
-- name: 'restart shell'
-  shell: 'exec $SHELL -l'
+# - name: 'restart shell'
+#   shell: 'exec $SHELL -l'
 
 - name: 'Setup nodenv'
   lineinfile:
@@ -18,17 +18,14 @@
 - name: 'enable nodenv'
   shell: 'source ~/.bash_profile'
 
-- name: 'restart shell'
-  shell: 'exec $SHELL -l'
-
 - name: 'Install Node.js 10.15.3'
-  shell: '/bin/bash nodenv install 10.15.3'
+  shell: 'nodenv install 10.15.3'
   ignore_errors: yes
   
 - name: 'Rehash nodenv'
-  shell: '/bin/bash nodenv rehash'
+  shell: 'nodenv rehash'
 
 - name: 'Set Global Node.js 10.15.3'
-  shell: '/bin/bash nodenv global 10.15.3'
+  shell: 'nodenv global 10.15.3'
 
 
