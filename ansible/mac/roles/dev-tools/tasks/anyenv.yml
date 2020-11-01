@@ -19,3 +19,6 @@
 
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
+
+- name: 'anyenv install --init'
+  shell: 'anyenv install --init'
