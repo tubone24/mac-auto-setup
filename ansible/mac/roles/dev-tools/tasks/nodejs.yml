@@ -12,7 +12,7 @@
 
 
 - name: 'restart shell'
-  shell: 'exec $SHELL -l'
+  shell: 'exec /bin/sh -l'
 
 - name: 'env'
   shell: 'env'
