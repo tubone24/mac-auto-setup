@@ -17,6 +17,11 @@
     name: 'fop'
     state: 'present'
 
+- name: 'Install wxWidgets'
+  homebrew:
+    name: 'wxWidgets'
+    state: 'present'
+
 - name: 'Plugin Erlang asdf'
   shell: 'asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git'
   ignore_errors: yes
