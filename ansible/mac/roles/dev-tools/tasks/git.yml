@@ -4,6 +4,11 @@
     name: 'git'
     state: 'present'
 
+- name: 'Install GitFlow AVH ver'
+  homebrew:
+    name: 'git-flow-avh'
+    state: 'present'
+
 - name: 'Show Git version'
   shell: 'git --version'
 

@@ -6,6 +6,10 @@ homebrew_packages.each do |package|
   end
 end
 
+describe command('git flow version') do
+  its(:stdout) { should match /AVH Edition/ }
+end
+
 describe command('git --version') do
   its(:stdout) { should match /(?!Apple Git-98)/ }
 end
