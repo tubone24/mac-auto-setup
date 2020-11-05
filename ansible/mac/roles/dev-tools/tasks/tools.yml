@@ -1,9 +1,10 @@
 ---
 - name: 'Install Util tools'
   homebrew:
-    name: '{{ item }}'
+    name: '{{ packages }}'
     state: 'present'
-  with_items:
+  vars:
+    packages:
     - 'awscli'
     - 'awsebcli'
     - 'packer'
