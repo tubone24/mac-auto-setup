@@ -25,7 +25,7 @@ jobs:
       versionSpec: '10.15.3'
 
   - script: |
-      brew unlink python@3.9 # AzureのPythonを解除
+      # brew unlink python@3.9 # AzureのPythonを解除
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
       brew install ansible
     displayName: 'Install Ansible'
