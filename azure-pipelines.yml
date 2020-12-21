@@ -26,7 +26,7 @@ jobs:
 
   - script: |
       # brew unlink python@3.9 # AzureのPythonを解除
-      export PATH = /usr/local/opt/python/libexec/bin:$PATH
+      export PATH = $(brew --prefix)/opt/python/libexec/bin:$PATH
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
       brew install ansible
     displayName: 'Install Ansible'
