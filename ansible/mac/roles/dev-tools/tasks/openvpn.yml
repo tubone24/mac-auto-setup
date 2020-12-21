@@ -1,9 +1,5 @@
 ---
-- name: 'Tap tunnelblick'
-  homebrew_tap:
-    name: tunnelblick
-
 - name: 'Install tunnelblick'
-  homebrew:
+  homebrew_cask:
     name: 'tunnelblick'
     state: 'present'
