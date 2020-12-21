@@ -34,4 +34,5 @@
 - include: 'gh.yml'
 - include: 'cocoapods.yml'
 - include: 'dbeaver.yml'
+- include: 'openvpn.yml'
 # - include: 'mas.yml' # comment out because failed CI

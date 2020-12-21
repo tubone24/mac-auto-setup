@@ -1,0 +1,9 @@
+---
+- name: 'Tap tunnelblick'
+  homebrew_tap:
+    name: tunnelblick
+
+- name: 'Install tunnelblick'
+  homebrew:
+    name: 'tunnelblick'
+    state: 'present'
