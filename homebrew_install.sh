@@ -599,7 +599,7 @@ ohai "Downloading and installing Homebrew..."
 
   execute "git" "reset" "--hard" "origin/master"
 
-  execute "git" "checkout" "refs/tags/${BREW_VERSION}"
+  execute "git" "checkout" "${BREW_VERSION}"
 
   execute "ln" "-sf" "${HOMEBREW_REPOSITORY}/bin/brew" "${HOMEBREW_PREFIX}/bin/brew"
 
