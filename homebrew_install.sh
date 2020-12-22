@@ -39,7 +39,7 @@ else
   TOUCH="/bin/touch"
 fi
 BREW_REPO="https://github.com/Homebrew/brew"
-BREW_VERSION="2.5.9"
+BREW_VERSION="2.4.16"
 
 # TODO: bump version when new macOS is released or announced
 MACOS_NEWEST_UNSUPPORTED="12.0"
