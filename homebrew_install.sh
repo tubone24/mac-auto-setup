@@ -39,7 +39,7 @@ else
   TOUCH="/bin/touch"
 fi
 BREW_REPO="https://github.com/Homebrew/brew"
-BREW_VERSION="2.6.2"
+BREW_VERSION="2.5.9"
 
 # TODO: bump version when new macOS is released or announced
 MACOS_NEWEST_UNSUPPORTED="12.0"
@@ -599,7 +599,7 @@ ohai "Downloading and installing Homebrew..."
 
   execute "git" "reset" "--hard" "origin/master"
 
-  execute "git" "reset" "--hard" "refs/tags/${BREW_VERSION}"
+  execute "git" "checkout" "refs/tags/${BREW_VERSION}"
 
   execute "ln" "-sf" "${HOMEBREW_REPOSITORY}/bin/brew" "${HOMEBREW_PREFIX}/bin/brew"
 
