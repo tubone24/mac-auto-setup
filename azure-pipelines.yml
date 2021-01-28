@@ -40,6 +40,10 @@ jobs:
       rm -rf /usr/local/bin/node
     displayName: 'Uninstall default node'
     
+  - script: |
+      brew uninstall google-chrome
+    displayName: 'Uninstall Default Google Chrome'
+    
     
   - script: |
       make setup TARGET=mac
