@@ -4,6 +4,19 @@
     name: 'rbenv'
     state: 'present'
 
+- name: 'Install openssl'
+  homebrew:
+    name: 'openssl'
+    state: 'present'
+    update_homebrew: yes
+    
+- name: 'check openssl'
+  shell: 'brew list openssl'
+  register: result
+  
+# - name: 'debug'
+#   debug: var=result
+
 - name: 'Install ruby-build'
   homebrew:
     name: 'ruby-build'
@@ -17,20 +30,7 @@
     - 'export PATH="$HOME/.rbenv/bin:$PATH"'
     - 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
     - 'export PATH=/usr/local/Cellar/openssl/1.0.2t/bin:$PATH'
-    - 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=/usr/local/opt/openssl@1.1"'
-
-- name: 'Install openssl'
-  homebrew:
-    name: 'openssl'
-    state: 'present'
-    update_homebrew: yes
-    
-- name: 'check openssl'
-  shell: 'brew list openssl'
-  register: result
-  
-- name: 'debug'
-  debug: var=result
+    - 'export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"'
   
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
