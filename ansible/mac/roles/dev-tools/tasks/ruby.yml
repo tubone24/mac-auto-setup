@@ -18,18 +18,18 @@
     - 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi'
     - 'export PATH=/usr/local/Cellar/openssl/1.0.2t/bin:$PATH'
 
-# - name: 'Install openssl'
-#   homebrew:
-#     name: 'openssl'
-#     state: 'present'
-#     update_homebrew: yes
+- name: 'Install openssl'
+  homebrew:
+    name: 'openssl'
+    state: 'present'
+    update_homebrew: yes
     
-# - name: 'check openssl'
-#   shell: 'brew list openssl'
-#   register: result
+- name: 'check openssl'
+  shell: 'brew list openssl'
+  register: result
   
-# - name: 'debug'
-#   debug: var=result
+- name: 'debug'
+  debug: var=result
   
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
