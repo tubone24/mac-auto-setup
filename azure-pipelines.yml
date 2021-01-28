@@ -41,7 +41,7 @@ jobs:
     displayName: 'Uninstall default node'
     
   - script: |
-      brew uninstall google-chrome
+      rm -rf /Applications/Google Chrome.app
     displayName: 'Uninstall Default Google Chrome'
     
     
