@@ -41,7 +41,7 @@ jobs:
     displayName: 'Uninstall default node'
     
   - script: |
-      rm -rf /Applications/Google Chrome.app
+      rm -rf '/Applications/Google Chrome.app'
     displayName: 'Uninstall Default Google Chrome'
     
     
