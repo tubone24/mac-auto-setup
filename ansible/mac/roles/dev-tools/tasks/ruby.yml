@@ -35,15 +35,15 @@
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
-- name: 'Install Ruby 2.4.0'
-  shell: 'rbenv install 2.4.0'
+- name: 'Install Ruby 2.7.2'
+  shell: 'rbenv install 2.7.2'
   ignore_errors: yes
 
 - name: 'Rehash rbenv'
   shell: 'rbenv rehash'
 
-- name: 'Set Global ruby 2.4.0'
-  shell: 'rbenv global 2.4.0'
+- name: 'Set Global ruby 2.7.2'
+  shell: 'rbenv global 2.7.2'
   ignore_errors: yes
 
 
