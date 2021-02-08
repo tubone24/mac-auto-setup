@@ -28,10 +28,10 @@
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
-- name: 'Install go 1.11.4'
-  shell: 'goenv install 1.11.4'
+- name: 'Install go 1.12.7'
+  shell: 'goenv install 1.12.7'
   ignore_errors: yes
 
-- name: 'enable global go 1.11.4'
-  shell: 'goenv global 1.11.4'
+- name: 'enable global go 1.12.7'
+  shell: 'goenv global 1.12.7'
   ignore_errors: yes

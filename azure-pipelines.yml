@@ -13,12 +13,12 @@ jobs:
   pool:
     vmImage: $(imageName)
   steps:
-  - task: UseRubyVersion@0
-    inputs:
-      versionSpec: '= 2.7'
-  - task: GoTool@0
-    inputs:
-      version: '1.11.4'
+  # - task: UseRubyVersion@0
+  #   inputs:
+  #     versionSpec: '= 2.7'
+  # - task: GoTool@0
+  #   inputs:
+  #     version: '1.11.4'
 
   - task: NodeTool@0 
     inputs:
