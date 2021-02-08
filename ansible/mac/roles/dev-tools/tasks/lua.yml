@@ -4,10 +4,10 @@
 #     name: 'lua'
 #     state: 'present'
 
-- name: 'Install luaenv'
-  homebrew:
-    name: 'luaenv'
-    state: 'present'
+- name: Git checkout luaenv
+  git:
+    repo: 'https://github.com/cehoffman/luaenv.git'
+    dest: ~/.luaenv
 
 - name: 'Install lua-build'
   homebrew:
@@ -19,10 +19,20 @@
     dest: '~/.bash_profile'
     line: '{{ item }}'
   with_items:
+    - 'export PATH="$HOME/.luaenv/bin:$PATH"'
     - 'eval "$(luaenv init -)"'
 
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
+
+- name: Git checkout luarocks
+  git:
+    repo: 'https://github.com/xpol/luaenv-luarocks.git'
+    dest: ~/.luaenv/plugins/luaenv-luarocks
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
 
 - name: 'install lua 5.2.1'
   shell: 'luaenv install 5.2.1'
