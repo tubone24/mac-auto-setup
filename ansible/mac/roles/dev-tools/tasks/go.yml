@@ -4,8 +4,18 @@
     name: 'goenv'
     state: 'present'
 
-# - name: 'Install goenv with anyenv'
-#   shell: 'anyenv install goenv'
+- name: 'old goroot remove'
+  shell: 'rm -rf `goenv root`'
+
+- name: 'Uninstall goenv'
+  homebrew:
+    name: 'goenv'
+    state: 'absent'
+
+- name: Git checkout
+  git:
+    repo: 'https://github.com/syndbg/goenv.git'
+    dest: ~/.goenv
 
 - name: 'Add GOPATH'
   lineinfile:
