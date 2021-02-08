@@ -36,7 +36,7 @@
   shell: 'source ~/.bash_profile'
 
 - name: 'Install Ruby 2.7.2'
-  shell: 'rbenv install 2.7.2'
+  shell: 'RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`" rbenv install 2.7.2'
   ignore_errors: yes
 
 - name: 'Rehash rbenv'
