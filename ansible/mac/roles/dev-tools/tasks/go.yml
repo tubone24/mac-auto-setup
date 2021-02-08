@@ -2,20 +2,7 @@
 - name: 'Install goenv'
   homebrew:
     name: 'goenv'
-    state: 'present'
-
-- name: 'old goroot remove'
-  shell: 'rm -rf `goenv root`'
-
-- name: 'Uninstall goenv'
-  homebrew:
-    name: 'goenv'
-    state: 'absent'
-
-- name: Git checkout
-  git:
-    repo: 'https://github.com/syndbg/goenv.git'
-    dest: ~/.goenv
+    state: 'head'
 
 - name: 'Add GOPATH'
   lineinfile:
