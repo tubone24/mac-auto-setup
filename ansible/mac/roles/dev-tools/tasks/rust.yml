@@ -1,6 +1,16 @@
 ---
-# ToDo: rustup-init
-- name: 'Install Rust'
+- name: 'Install rustup'
   homebrew:
-    name: 'rust'
+    name: 'rustup'
     state: 'present'
+
+- name: 'enable rustup-init'
+  shell: 'rustup-init'
+
+- name: 'Add PATH'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'export CARGO_HOME="$HOME/.cargo"'
+    - 'export PATH="$CARGO_HOME/bin:$PATH"'

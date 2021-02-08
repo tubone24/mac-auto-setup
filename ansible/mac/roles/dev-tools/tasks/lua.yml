@@ -1,5 +1,31 @@
 ---
-- name: 'Install Lua'
+# - name: 'Install Lua'
+#   homebrew:
+#     name: 'lua'
+#     state: 'present'
+
+- name: 'Install luaenv'
   homebrew:
-    name: 'lua'
+    name: 'luaenv'
     state: 'present'
+
+- name: 'Install lua-build'
+  homebrew:
+    name: 'lua-build'
+    state: 'present'
+
+- name: 'Add luaenv init'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'eval "$(luaenv init -)"'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
+- name: 'install lua 5.2.1'
+  shell: 'luaenv install 5.2.1'
+
+- name: 'global lua 5.2.1'
+  shell: 'luaenv global 5.2.1'
