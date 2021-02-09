@@ -28,8 +28,8 @@ jobs:
       # brew unlink python@3.9 # AzureのPythonを解除
       # export PATH =  /usr/local/opt/python@3.9/libexec/bin:$PATH　
       # brew link --overwrite python@3.9
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+      # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+      # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
       rm '/usr/local/bin/2to3'
       brew --version
       brew link --overwrite python@3.9
