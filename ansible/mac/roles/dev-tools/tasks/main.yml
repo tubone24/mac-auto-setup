@@ -1,5 +1,6 @@
 ---
 - include: 'mac_default_write.yml'
+- include: 'rust.yml'
 - include: 'tools.yml'
 - include: 'git.yml'
 # - include: 'anyenv.yml'
@@ -26,7 +27,6 @@
 - include: 'lua.yml'
 - include: 'font.yml'
 - include: 'app_cleaner.yml'
-- include: 'rust.yml'
 # - include: 'drone.yml' # not use
 - include: 'nim.yml'
 - include: 'alfred.yml'
