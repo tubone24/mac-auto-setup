@@ -31,7 +31,7 @@
   shell: 'source ~/.bash_profile'
 
 - name: 'install lua 5.2.1'
-  shell: 'luaenv install 5.2.1'
+  shell: '~/.luaenv/bin/luaenv install 5.2.1'
 
 - name: 'global lua 5.2.1'
-  shell: 'luaenv global 5.2.1'
+  shell: '~/.luaenv/bin/luaenv global 5.2.1'
