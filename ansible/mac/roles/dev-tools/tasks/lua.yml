@@ -9,10 +9,10 @@
     repo: 'https://github.com/cehoffman/luaenv.git'
     dest: ~/.luaenv
 
-- name: 'Install lua-build'
-  homebrew:
-    name: 'lua-build'
-    state: 'present'
+- name: Git checkout lua-build
+  git:
+    repo: 'https://github.com/cehoffman/lua-build.git'
+    dest: ~/.luaenv/plugins/lua-build
 
 - name: 'Add luaenv init'
   lineinfile:
