@@ -2,6 +2,9 @@ TARGET = $1
 CD_ANSIBLE = cd ansible/${TARGET}
 CD_SERVERSPEC = cd serverspec/${TARGET}
 
+install-ansible:
+	brew install ansible
+
 setup:
 	@${CD_ANSIBLE} && \
 	ansible-playbook playbooks/my-mac.yml
