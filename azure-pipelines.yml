@@ -33,7 +33,7 @@ jobs:
       rm '/usr/local/bin/2to3'
       brew --version
       brew link --overwrite python@3.9
-      pip install --user ansible
+      pip3 install --user ansible
       ansible --version | grep "python version"
       # brew install ansible
     displayName: 'Install Ansible'
