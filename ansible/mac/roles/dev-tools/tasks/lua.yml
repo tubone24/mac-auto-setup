@@ -14,6 +14,11 @@
     repo: 'https://github.com/cehoffman/lua-build.git'
     dest: ~/.luaenv/plugins/lua-build
 
+- name: Git checkout luarocks
+  git:
+    repo: 'https://github.com/xpol/luaenv-luarocks.git'
+    dest: ~/.luaenv/plugins/luaenv-luarocks
+
 - name: 'Add luaenv init'
   lineinfile:
     dest: '~/.bash_profile'
@@ -25,17 +30,8 @@
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
-- name: Git checkout luarocks
-  git:
-    repo: 'https://github.com/xpol/luaenv-luarocks.git'
-    dest: ~/.luaenv/plugins/luaenv-luarocks
-
-- name: 'enable bash_profile'
-  shell: 'source ~/.bash_profile'
-
-
 - name: 'install lua 5.2.1'
-  shell: 'luaenv install 5.2.1'
+  shell: '/bin/bash luaenv install 5.2.1'
 
 - name: 'global lua 5.2.1'
-  shell: 'luaenv global 5.2.1'
+  shell: '/bin/bash luaenv global 5.2.1'
