@@ -24,7 +24,7 @@
     dest: '~/.bash_profile'
     line: '{{ item }}'
   with_items:
-    - 'export PATH="$HOME/.luaenv/bin:$PATH"'
+    - 'export PATH=$HOME/.luaenv/bin:$PATH'
     - 'eval "$(luaenv init -)"'
 
 - name: 'enable bash_profile'
