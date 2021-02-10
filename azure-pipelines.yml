@@ -41,6 +41,10 @@ jobs:
   - script: |
       rm -rf /usr/local/bin/node
     displayName: 'Uninstall default node'
+
+  - script: |
+      rm -rf /usr/local/bin/go
+    displayName: 'Uninstall default go'
     
   - script: |
       rm -rf '/Applications/Google Chrome.app'
