@@ -8,7 +8,7 @@
 #   shell: 'rustup-init'
 
 - name: 'pexpect (need expect ansible)'
-  shell: 'python -m pip install pexpect'
+  shell: '/usr/bin/python3 -m pip install pexpect'
   vars:
     ansible_python_interpreter: /usr/bin/python3
 

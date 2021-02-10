@@ -1,12 +1,12 @@
 ---
 - include: 'mac_default_write.yml'
-- include: 'python.yml'
 - include: 'rust.yml'
 - include: 'tools.yml'
 - include: 'git.yml'
 # - include: 'anyenv.yml'
 - include: 'nodejs.yml'
 - include: 'terraform.yml'
+- include: 'python.yml'
 - include: 'ruby.yml'
 - include: 'docker.yml'
 - include: 'go.yml'
