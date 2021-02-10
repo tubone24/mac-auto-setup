@@ -35,7 +35,7 @@ jobs:
       brew link --overwrite python@3.9
       # pip3 install --user ansible
       # ansible --version | grep "python version"
-      # brew install ansible
+      brew install ansible
     displayName: 'Install Ansible'
     
   - script: |
