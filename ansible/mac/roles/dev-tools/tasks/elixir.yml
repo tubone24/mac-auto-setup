@@ -44,7 +44,32 @@
   shell: 'asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git'
   ignore_errors: yes
 
-# 時間がかかりすぎてエラーになるかも
+- name: 'Add Option'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: '{{ item }}'
+  with_items:
+    - 'KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl)"'
+
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
+# ToDo: Error
+# Extracting source code
+# Building Erlang/OTP 22.3.4.12 (asdf_22.3.4.12), please wait...
+# Build failed.
+# checking if we can link wxwidgets programs... yes
+# checking if we can add -Werror=return-type to CFLAGS (via CFLAGS)... yes
+# checking if we can add -Werror=return-type to CXXFLAGS (via CFLAGS)... yes
+# configure: creating x86_64-apple-darwin19.6.0/config.status
+# config.status: creating config.mk
+# config.status: creating c_src/Makefile
+# Makefile:250: /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp_ded.mk: No such file or directory
+# Makefile:478: /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp.mk: No such file or directory
+# make[1]: *** No rule to make target `/Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp.mk'.  Stop.
+# Please see /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_build_22.3.4.12.log for full details.",
+# "stdout_lines": ["asdf_22.3.4.12 is not a kerl-managed Erlang/OTP installation", "No build named asdf_22.3.4.12", "Downloading OTP-22.3.4.12.tar.gz to /Users/runner/.asdf/plugins/erlang/kerl-home/archives...", "Extracting source code", "Building Erlang/OTP 22.3.4.12 (asdf_22.3.4.12), please wait...", "Build failed.", "checking if we can link wxwidgets programs... yes", "checking if we can add -Werror=return-type to CFLAGS (via CFLAGS)... yes", "checking if we can add -Werror=return-type to CXXFLAGS (via CFLAGS)... yes", "configure: creating x86_64-apple-darwin19.6.0/config.status", "config.status: creating config.mk", "config.status: creating c_src/Makefile", "", "Makefile:250: /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp_ded.mk: No such file or directory", "Makefile:478: /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp.mk: No such file or directory", "make[1]: *** No rule to make target `/Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_src_22.3.4.12/make/m68k-apple-macos/otp.mk'.  Stop.", "", "Please see /Users/runner/.asdf/plugins/erlang/kerl-home/builds/asdf_22.3.4.12/otp_build_22.3.4.12.log for full details."]}
+
 - name: 'Install Erlang 22.3.4.12'
   shell: 'asdf install erlang 22.3.4.12'
   ignore_errors: yes
