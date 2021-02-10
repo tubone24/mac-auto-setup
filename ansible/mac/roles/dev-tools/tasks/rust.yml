@@ -9,6 +9,8 @@
 
 - name: 'pexpect (need expect ansible)'
   shell: 'python -m pip install pexpect'
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
 
 - name: enable rustup-init
   expect:
@@ -16,6 +18,8 @@
     responses:
       3\): "1"
   no_log: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
 
 - name: 'Add PATH'
   lineinfile:
