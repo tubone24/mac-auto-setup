@@ -10,6 +10,7 @@
 - include: 'ruby.yml'
 - include: 'docker.yml'
 - include: 'go.yml'
+- include: 'java.yml'
 - include: 'asdf.yml'
 - include: 'elixir.yml'
 - include: 'google-japanese-ime.yml'
