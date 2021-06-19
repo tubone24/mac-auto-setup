@@ -13,7 +13,6 @@
     - 'tmux'
     - 'peco'
     - 'wget'
-    - 'zplug'
     - 'reattach-to-user-namespace'
     - 'coreutils'
     - 'tree'
