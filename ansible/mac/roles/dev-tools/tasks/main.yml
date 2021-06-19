@@ -1,5 +1,6 @@
 ---
 - include: 'mac_default_write.yml'
+- include: 'preconditions.yml'
 - include: 'tools.yml'
 - include: 'git.yml'
 # - include: 'anyenv.yml'
@@ -22,7 +23,7 @@
 - include: 'chrome.yml'
 - include: 'editor.yml'
 - include: 'postman.yml'
-# - include: 'flutter.yml'
+- include: 'flutter.yml'
 - include: 'gui_archiver.yml'
 # - include: 'dash.yml'
 - include: 'lua.yml'
@@ -35,5 +36,5 @@
 - include: 'gh.yml'
 - include: 'cocoapods.yml'
 - include: 'dbeaver.yml'
-# - include: 'openvpn.yml'
+- include: 'openvpn.yml'
 # - include: 'mas.yml' # comment out because failed CI

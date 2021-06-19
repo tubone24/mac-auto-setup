@@ -32,13 +32,14 @@
 - name: 'enable bash_profile'
   shell: 'source ~/.bash_profile'
 
-- name: 'Install Python 3.6.1'
-  shell: 'pyenv install 3.6.1'
+- name: 'Install Python 3.9.0'
+  shell: 'pyenv install 3.9.0'
   ignore_errors: yes
 
-- name: 'Install Python 3.6.1'
-  shell: 'pyenv virtualenv 3.6.1 py361'
+- name: 'Install Python 3.9.0'
+  shell: 'pyenv virtualenv 3.9.0 py390'
   ignore_errors: yes
+
 
 
 

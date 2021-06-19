@@ -1,8 +1,8 @@
 ---
-- name: 'Install Docker'
-  homebrew:
-    name: 'docker'
-    state: 'present'
+#- name: 'Install Docker'
+#  homebrew:
+#    name: 'docker'
+#    state: 'present'
 
 - name: 'Install Docker GUI'
   homebrew_cask:
