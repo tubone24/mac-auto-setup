@@ -28,5 +28,8 @@
   with_items:
     - 'export PATH=~/flutter/bin:$PATH'
 
+- name: 'enable bash_profile'
+  shell: 'source ~/.bash_profile'
+
 - name: 'Flutter precache'
   shell: 'flutter precache'
