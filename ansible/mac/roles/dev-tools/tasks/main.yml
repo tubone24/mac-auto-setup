@@ -23,7 +23,7 @@
 - include: 'chrome.yml'
 - include: 'editor.yml'
 - include: 'postman.yml'
-- include: 'flutter.yml'
+# - include: 'flutter.yml'
 - include: 'gui_archiver.yml'
 # - include: 'dash.yml'
 - include: 'lua.yml'
