@@ -1,0 +1,5 @@
+---
+- name: 'Install GIMP'
+  homebrew_cask:
+    name: 'gimp'
+    state: 'present'

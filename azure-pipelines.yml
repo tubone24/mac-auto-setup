@@ -52,8 +52,12 @@ jobs:
     
     
   - script: |
-      make setup TARGET=mac
-    displayName: 'Run Ansible'
+      make setup-devtools TARGET=mac
+    displayName: 'Run Ansible devtools'
+
+  - script: |
+      make setup-native-apps TARGET=mac
+    displayName: 'Run Ansible native-apps'
     
   - script: |
       make before-check TARGET=mac

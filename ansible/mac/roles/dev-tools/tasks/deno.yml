@@ -1,0 +1,5 @@
+---
+- name: 'Install Deno'
+  homebrew:
+    name: 'deno'
+    state: 'present'

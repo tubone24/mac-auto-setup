@@ -9,6 +9,14 @@ setup:
 	@${CD_ANSIBLE} && \
 	ansible-playbook playbooks/my-mac.yml
 
+setup-devtools:
+	@${CD_ANSIBLE} && \
+	ansible-playbook playbooks/dev-tools.yml
+
+setup-native-apps:
+	@${CD_ANSIBLE} && \
+	ansible-playbook playbooks/native-apps.yml
+
 before-check:
 	@${CD_SERVERSPEC} && \
 	bundle update --bundler && \
