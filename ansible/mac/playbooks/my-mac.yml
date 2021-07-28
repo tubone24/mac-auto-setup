@@ -3,3 +3,4 @@
   roles:
     - 'dev-tools'
     - 'native-apps'
+    - 'mas'
