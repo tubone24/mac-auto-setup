@@ -21,7 +21,7 @@ git_conf.each do |conf|
 end
 
 describe command('pyenv versions') do
-  its(:stdout) { should match /py361/ }
+  its(:stdout) { should match /py390/ }
 end
 
 describe command('nodenv versions') do
@@ -45,9 +45,9 @@ describe command('docker --version') do
 end
 
 # なぜか通らない...。
-# describe command('go version') do
-#   its(:stdout) { should match /1.12.7/ }
-# end
+describe command('go version') do
+  its(:stdout) { should match /1.12.7/ }
+end
 
 describe command('gradle -v') do
   its(:stdout) { should match /Gradle/ }

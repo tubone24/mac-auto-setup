@@ -7,10 +7,11 @@ vars:
     - rbenv
     - ruby-build
     - tfenv
+    - goenv
     - awscli
     - packer
     - jq
-    - docker
+    - deno
   git_conf:
     - tubone24
     - tubo.yyyuuu@gmail.com
