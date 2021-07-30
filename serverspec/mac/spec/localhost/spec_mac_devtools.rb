@@ -29,7 +29,7 @@ describe command('nodenv versions') do
 end
 
 describe command('source ~/.bash_profile && node -v') do
-  its(:stdout) { should match /v10.15.3/ }
+  its(:stdout) { should match /v14.17.4/ }
 end
 
 describe command('tfenv list') do
