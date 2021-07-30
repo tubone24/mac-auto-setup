@@ -28,7 +28,7 @@ describe command('nodenv versions') do
   its(:stdout) { should match /10.15.3/ }
 end
 
-describe command('node -v') do
+describe command('source ~/.bash_profile && node -v') do
   its(:stdout) { should match /v10.15.3/ }
 end
 
