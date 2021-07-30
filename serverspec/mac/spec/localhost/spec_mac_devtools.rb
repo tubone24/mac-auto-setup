@@ -40,12 +40,11 @@ describe command('terraform -v') do
   its(:stdout) { should match /0.11.13/ }
 end
 
-describe command('docker --version') do
-  its(:stdout) { should match /Docker version/ }
-end
+# describe command('docker --version') do
+#   its(:stdout) { should match /Docker version/ }
+# end
 
-# なぜか通らない...。
-describe command('go version') do
+describe command('source ~/.bash_profile && go version') do
   its(:stdout) { should match /1.12.7/ }
 end
 
