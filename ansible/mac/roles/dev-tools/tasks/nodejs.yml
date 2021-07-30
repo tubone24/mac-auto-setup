@@ -15,7 +15,7 @@
 - name: 'Install and Upgrade Homebrew'
   homebrew:
     name: 'node-build'
-    state: 'present'
+    state: 'latest'
     update_homebrew: yes
 
 - name: 'Install Node.js 10.15.3'
