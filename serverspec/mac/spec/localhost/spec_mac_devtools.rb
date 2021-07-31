@@ -40,10 +40,6 @@ describe command('terraform -v') do
   its(:stdout) { should match /0.11.13/ }
 end
 
-# describe command('docker --version') do
-#   its(:stdout) { should match /Docker version/ }
-# end
-
 describe command('source ~/.bash_profile && go version') do
   its(:stdout) { should match /1.12.7/ }
 end
@@ -52,10 +48,6 @@ describe command('gradle -v') do
   its(:stdout) { should match /Gradle/ }
 end
 
-# describe command('asdf current erlang') do
-#   its(:stdout) { should match /21.1/ }
-# end
-
-# describe command('asdf current elixir') do
-#   its(:stdout) { should match /1.7.4/ }
-# end
+describe command('source ~/.bash_profile && yarn --version') do
+  its(:stdout) { should match /1./ }
+end
