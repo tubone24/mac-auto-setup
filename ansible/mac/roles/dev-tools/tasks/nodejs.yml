@@ -33,6 +33,6 @@
   shell: 'nodenv global 14.17.4'
 
 - name: 'Install Yarn'
-  shell: 'npm install -g yarn'
+  shell: 'source ~/.bash_profile && npm install -g yarn'
 
 
