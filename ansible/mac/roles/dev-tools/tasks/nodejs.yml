@@ -32,4 +32,7 @@
 - name: 'Set Global Node.js 14.17.4'
   shell: 'nodenv global 14.17.4'
 
+- name: 'Install Yarn'
+  shell: 'npm install -g yarn'
+
 
