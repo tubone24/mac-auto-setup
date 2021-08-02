@@ -1,0 +1,38 @@
+---
+- name: 'Install nodenv'
+  homebrew:
+    name: 'nodenv'
+    state: 'present'
+
+- name: 'Setup nodenv'
+  lineinfile:
+    dest: '~/.bash_profile'
+    line: 'eval "$(nodenv init -)"'
+
+- name: 'enable nodenv'
+  shell: 'source ~/.bash_profile'
+
+- name: 'Install and Upgrade Homebrew'
+  homebrew:
+    name: 'node-build'
+    state: 'latest'
+    update_homebrew: yes
+
+- name: 'Install Node.js 10.15.3'
+  shell: 'nodenv install 10.15.3'
+  ignore_errors: yes
+
+- name: 'Install Node.js 14.17.4'
+  shell: 'nodenv install 14.17.4'
+  ignore_errors: yes
+
+- name: 'Rehash nodenv'
+  shell: 'nodenv rehash'
+
+- name: 'Set Global Node.js 14.17.4'
+  shell: 'nodenv global 14.17.4'
+
+- name: 'Install Yarn'
+  shell: 'source ~/.bash_profile && npm install -g yarn'
+
+

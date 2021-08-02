@@ -1,0 +1,7 @@
+---
+- name: 'Install Docker GUI'
+  homebrew_cask:
+    name: 'docker'
+    state: 'present'
+
+

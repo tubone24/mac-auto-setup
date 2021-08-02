@@ -1,0 +1,5 @@
+---
+- name: 'touch bash profile'
+  file:
+    path: '~/.bash_profile'
+    state: touch

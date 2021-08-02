@@ -1,0 +1,13 @@
+---
+- name: 'Install Util tools'
+  homebrew:
+    name: '{{ packages }}'
+    state: 'present'
+  vars:
+    packages:
+    - 'jq'
+    - 'zsh'
+    - 'tmux'
+    - 'peco'
+    - 'reattach-to-user-namespace'
+    - 'mycli'
