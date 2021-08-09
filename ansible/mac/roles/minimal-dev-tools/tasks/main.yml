@@ -13,3 +13,4 @@
 - include: 'editor.yml'
 - include: 'gh.yml'
 - include: 'dbeaver.yml'
+- include: 'clipy.yml'

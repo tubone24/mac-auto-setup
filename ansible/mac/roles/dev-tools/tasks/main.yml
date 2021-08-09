@@ -32,3 +32,4 @@
 - include: 'dbeaver.yml'
 - include: 'openvpn.yml'
 - include: 'ffmpeg.yml'
+- include: 'clipy.yml'
