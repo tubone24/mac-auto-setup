@@ -1,0 +1,5 @@
+---
+- name: 'Install Clipy'
+  homebrew_cask:
+    name: 'clipy'
+    state: 'present'
