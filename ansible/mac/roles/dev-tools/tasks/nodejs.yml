@@ -18,6 +18,13 @@
     state: 'latest'
     update_homebrew: yes
 
+- name: 'import nodenv update'
+  shell: mkdir -p "$(nodenv root)"/plugins && git clone https://github.com/nodenv/nodenv-update.git "$(nodenv root)"/plugins/nodenv-update
+  ignore_errors: yes
+
+- name: 'nodenv update'
+  shell: nodenv update
+
 - name: 'Install Node.js 10.15.3'
   shell: 'nodenv install 10.15.3'
   ignore_errors: yes
