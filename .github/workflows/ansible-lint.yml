@@ -1,6 +1,6 @@
 name: Ansible Lint
 
-on: [push, pull_request]
+on: push
 
 jobs:
   build:
@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Lint Ansible Playbook
-      uses: ansible/ansible-lint-action@v4.1.0.post0
+      uses: ansible/ansible-lint-action@v4.1.0
       with:
         targets: |
           ansible/mac/playbooks/my-mac.yml
