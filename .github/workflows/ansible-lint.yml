@@ -12,5 +12,5 @@ jobs:
     - name: Lint Ansible Playbook
       uses: ansible/ansible-lint-action@v4.1.0
       with:
-        targets: |
-          ansible/mac/playbooks/my-mac.yml
+        targets: ansible/mac/playbooks/my-mac.yml
+        args: ""
