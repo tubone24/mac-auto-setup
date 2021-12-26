@@ -1,0 +1,5 @@
+---
+- name: 'Install nasm'
+  homebrew:
+    name: 'nasm'
+    state: 'present'

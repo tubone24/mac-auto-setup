@@ -12,6 +12,7 @@
 - include: 'go.yml'
 - include: 'java.yml'
 - include: 'deno.yml'
+- include: 'asm.yml'
 - include: 'google-japanese-ime.yml'
 - include: 'gradle.yml'
 - include: 'intellj.yml'
