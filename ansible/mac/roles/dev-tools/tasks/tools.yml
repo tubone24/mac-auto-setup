@@ -12,6 +12,7 @@
     - 'zsh'
     - 'tmux'
     - 'peco'
+    - 'ghq'
     - 'wget'
     - 'reattach-to-user-namespace'
     - 'coreutils'
