@@ -1,7 +1,7 @@
 ---
 - name: Git checkout my dotfile
   git:
-    repo: 'git@github.com:tubone24/dotfiles.git'
+    repo: 'https://github.com/tubone24/dotfiles.git'
     dest: '~/dotfiles'
 - name: 'Install dotfile'
   script: 'cd dotfiles && zsh install.sh'
