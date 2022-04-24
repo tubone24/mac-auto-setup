@@ -1,0 +1,7 @@
+---
+- name: 'Install google-cloud-sdk'
+  homebrew_cask:
+    name: 'google-cloud-sdk'
+    state: 'present'
+
+

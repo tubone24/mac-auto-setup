@@ -1,0 +1,8 @@
+---
+
+- name: 'Install aws-vault'
+  homebrew_cask:
+    name: 'aws-vault'
+    state: 'present'
+
+
