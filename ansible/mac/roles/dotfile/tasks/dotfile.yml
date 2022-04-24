@@ -4,4 +4,4 @@
     repo: 'https://github.com/tubone24/dotfiles.git'
     dest: '~/dotfiles'
 - name: 'Install dotfile'
-  shell: 'cd ~/dotfiles && sh install.sh'
+  shell: 'cd ~/dotfiles && zsh install.sh'
