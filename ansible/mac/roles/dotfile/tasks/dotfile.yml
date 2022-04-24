@@ -3,7 +3,5 @@
   git:
     repo: 'https://github.com/tubone24/dotfiles.git'
     dest: '~/dotfiles'
-- name: 'ls'
-  script: 'ls -la'
 - name: 'Install dotfile'
-  script: 'cd ~/dotfiles && zsh install.sh'
+  shell: 'cd ~/dotfiles && sh install.sh'
