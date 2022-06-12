@@ -33,6 +33,7 @@
 - include: 'dbeaver.yml'
 - include: 'openvpn.yml'
 - include: 'ffmpeg.yml'
+- include: 'powershell.yml'
 - include: 'clipy.yml'
 - include: 'google-cloud-sdk.yml'
 - include: 'aws-vault.yml'

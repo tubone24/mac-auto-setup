@@ -1,0 +1,5 @@
+---
+- name: 'Install Powershell'
+  homebrew_cask:
+    name: 'powershell'
+    state: 'present'
