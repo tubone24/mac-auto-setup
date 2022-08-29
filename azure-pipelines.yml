@@ -10,6 +10,9 @@ jobs:
       #   imageName: 'macOS-10.14'
       macCatalina:
         imageName: 'macOS-10.15' 
+      macBigSur:
+        imageName: 'macOS-11' 
+        
   pool:
     vmImage: $(imageName)
   steps:
