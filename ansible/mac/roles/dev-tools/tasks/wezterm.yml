@@ -1,0 +1,9 @@
+---
+- name: 'Tap wez/wezterm'
+  homebrew_tap:
+    name: wez/wezterm
+
+- name: 'Install wezterm'
+  homebrew:
+    name: 'wezterm'
+    state: 'present'
