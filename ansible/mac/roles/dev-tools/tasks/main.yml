@@ -18,7 +18,7 @@
 - include: 'intellj.yml'
 - include: 'slack.yml'
 - include: 'virtualbox.yml'
-- include: 'iterm2.yml'
+- include: 'wezterm.yml'
 - include: 'chrome.yml'
 - include: 'editor.yml'
 - include: 'postman.yml'
