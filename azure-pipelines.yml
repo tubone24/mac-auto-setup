@@ -8,8 +8,8 @@ jobs:
     matrix:
       # macMojave: # 動かない！
       #   imageName: 'macOS-10.14'
-      macCatalina:
-        imageName: 'macOS-10.15' 
+      # macCatalina:
+      #   imageName: 'macOS-10.15' 
       macBigSur:
         imageName: 'macOS-11' 
         
@@ -41,6 +41,10 @@ jobs:
   - script: |
       rm -rf '/Applications/Google Chrome.app'
     displayName: 'Uninstall Default Google Chrome'
+
+  - script: |
+      spctl --master-disable
+    displayName: 'Disable Mac Gatekeeper'
     
     
   - script: |
