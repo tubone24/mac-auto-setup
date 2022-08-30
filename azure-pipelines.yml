@@ -43,7 +43,7 @@ jobs:
     displayName: 'Uninstall Default Google Chrome'
 
   - script: |
-      spctl --master-disable
+      sudo spctl --master-disable
     displayName: 'Disable Mac Gatekeeper'
     
     
