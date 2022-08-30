@@ -5,5 +5,5 @@
 
 - name: 'Install wezterm'
   homebrew:
-    name: 'wezterm-nightly'
+    name: 'wezterm'
     state: 'present'
