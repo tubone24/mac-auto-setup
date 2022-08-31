@@ -4,4 +4,4 @@
   homebrew:
     name: 'wezterm'
     state: 'present'
-    install_options: 'no-quarantine'
+    install_options: '--no-quarantine'
