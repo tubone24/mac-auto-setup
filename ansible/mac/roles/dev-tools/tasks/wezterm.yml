@@ -1,7 +1,9 @@
 ---
 
-- name: 'Install wezterm'
-  homebrew:
-    name: 'wezterm'
-    state: 'present'
-    install_options: '--no-quarantine'
+
+# CIでエラーになるので一旦コメントアウト
+# - name: 'Install wezterm'
+#   homebrew:
+#     name: 'wezterm'
+#     state: 'present'
+#     install_options: '--no-quarantine'
