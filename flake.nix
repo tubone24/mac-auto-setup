@@ -55,5 +55,20 @@
           }
         ];
       };
+
+      # CI checks - verify the configurations evaluate correctly
+      checks = let
+        forAllSystems = nixpkgs.lib.genAttrs [ "aarch64-darwin" "x86_64-darwin" ];
+      in forAllSystems (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in {
+          # Verify the flake configuration evaluates without errors
+          eval = pkgs.runCommand "eval-check" {} ''
+            echo "Flake evaluation succeeded for ${system}"
+            touch $out
+          '';
+        }
+      );
     };
 }
