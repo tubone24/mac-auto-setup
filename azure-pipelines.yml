@@ -21,20 +21,17 @@ jobs:
       set -euo pipefail
       echo ">>> Architecture: $(uname -m)"
       echo ">>> macOS version: $(sw_vers -productVersion)"
-      # Use the official Nix installer (supports both x86_64 and aarch64 darwin)
-      curl -L https://nixos.org/nix/install | sh -s -- --no-daemon
-      # Source nix profile immediately
-      . "$HOME/.nix-profile/etc/profile.d/nix.sh"
-      nix --version
-      # Enable flakes and nix-command
-      mkdir -p ~/.config/nix
-      echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
+      # Use the official Nix multi-user installer (--no-daemon is no longer supported on macOS)
+      curl -L https://nixos.org/nix/install | sh -s -- --daemon --yes
       echo ">>> Nix installed successfully"
     displayName: 'Install Nix'
 
   - script: |
       . ci/nix-env.sh
       nix --version
+      # Enable flakes and nix-command
+      mkdir -p ~/.config/nix
+      echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
       echo ">>> Nix is available"
     displayName: 'Verify Nix installation'
 
