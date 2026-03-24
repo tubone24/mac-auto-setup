@@ -2,18 +2,10 @@
 
 {
   home.packages = with pkgs; [
-    # Node.js - use fnm (Fast Node Manager) instead of nodenv
-    fnm
-    yarn
+    # asdf-vm - universal version manager for Node.js, Python, Ruby, etc.
+    asdf-vm
 
-    # Python - version manager
-    pyenv
-
-    # Ruby - version manager
-    rbenv
-    ruby-build
-
-    # Go
+    # Go (managed directly via Nix; asdf plugin also available)
     go
 
     # Rust
@@ -31,12 +23,7 @@
 
     # Java build tool
     gradle
-
-    # Elixir/Erlang via asdf
-    asdf-vm
-
-    # Flutter (installed via Homebrew cask or manually - see shell.nix for PATH)
   ];
 
-  # Shell integrations for version managers are configured in shell.nix
+  # Shell integrations for asdf are configured in shell.nix
 }

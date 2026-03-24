@@ -41,7 +41,6 @@
     unixodbc
 
     # Database tools
-    mycli
     dbmate
     pgformatter
 

@@ -7,26 +7,15 @@
     syntaxHighlighting.enable = true;
 
     initExtra = ''
-      # fnm (Fast Node Manager) - replaces nodenv
-      eval "$(fnm env --use-on-cd)"
-
-      # pyenv
-      export PYENV_ROOT="$HOME/.pyenv"
-      export PATH="$PYENV_ROOT/bin:$PATH"
-      eval "$(pyenv init -)"
-      eval "$(pyenv virtualenv-init -)" 2>/dev/null
-
-      # rbenv
-      eval "$(rbenv init -)"
+      # asdf - universal version manager (Node.js, Python, Ruby, Erlang, Elixir, etc.)
+      . "$(asdf where 2>/dev/null || echo /dev/null)" 2>/dev/null
+      [ -f "$HOME/.asdf/asdf.sh" ] && . "$HOME/.asdf/asdf.sh"
 
       # Rust/Cargo
       [ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 
       # direnv
       eval "$(direnv hook zsh)"
-
-      # asdf (for Erlang/Elixir)
-      [ -f "$(brew --prefix asdf 2>/dev/null)/libexec/asdf.sh" ] && . "$(brew --prefix asdf 2>/dev/null)/libexec/asdf.sh"
 
       # Flutter
       export PATH="$HOME/flutter/bin:$PATH"
