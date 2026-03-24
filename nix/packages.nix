@@ -34,7 +34,6 @@
     libtool
 
     # Libraries
-    openssl_1_1
     libyaml
     readline
     libxslt
