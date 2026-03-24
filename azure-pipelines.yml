@@ -20,15 +20,18 @@ jobs:
   - script: |
       curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install --no-confirm
       echo ">>> Nix installed"
+      export PATH="/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:$PATH"
+      nix --version
     displayName: 'Install Nix'
 
   - script: |
-      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      . ci/nix-env.sh
       nix --version
+      echo ">>> Nix is available"
     displayName: 'Verify Nix installation'
 
   - script: |
-      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      . ci/nix-env.sh
       echo ">>> Evaluating flake configuration..."
       nix eval .#darwinConfigurations.my-mac.system --json > /dev/null 2>&1 || \
         nix eval .#darwinConfigurations.my-mac.config.system.build.toplevel --raw > /dev/null
@@ -36,7 +39,7 @@ jobs:
     displayName: 'Evaluate Nix flake'
 
   - script: |
-      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      . ci/nix-env.sh
       echo ">>> Building nix-darwin system closure (this downloads/builds all Nix packages)..."
       nix build .#darwinConfigurations.my-mac.system --no-link --print-build-logs 2>&1 | tail -50
       echo ">>> System closure build succeeded"
@@ -44,7 +47,7 @@ jobs:
     timeoutInMinutes: 90
 
   - script: |
-      . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+      . ci/nix-env.sh
       echo ">>> Verifying Nix packages are available..."
       bash ci/verify-nix-packages.sh
     displayName: 'Verify Nix packages'

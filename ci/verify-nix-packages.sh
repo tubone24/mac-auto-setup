@@ -3,7 +3,8 @@
 # This script instantiates each package from nixpkgs to confirm it exists and resolves.
 set -euo pipefail
 
-. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+. "$SCRIPT_DIR/nix-env.sh"
 
 FAILED=0
 PASSED=0
