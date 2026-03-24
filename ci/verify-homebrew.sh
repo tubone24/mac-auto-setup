@@ -90,7 +90,6 @@ CASKS=(
   "clipy"
   "tunnelblick"
   "oracle-jdk"
-  "powershell"
 )
 
 for cask in "${CASKS[@]}"; do

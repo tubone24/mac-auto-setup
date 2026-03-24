@@ -63,7 +63,6 @@
 
       # Languages & Runtimes
       "oracle-jdk"
-      "powershell"
     ];
 
     # Mac App Store apps (requires `mas` CLI and Apple ID sign-in)
