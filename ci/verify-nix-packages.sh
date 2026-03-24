@@ -40,8 +40,7 @@ echo "============================================"
 
 # packages.nix - CLI tools
 check_nix_package "awscli2" "awscli2"
-check_nix_package "packer" "packer"
-check_nix_package "terraform" "terraform"
+check_nix_package "opentofu" "opentofu"
 check_nix_package "jq" "jq"
 check_nix_package "yq" "yq"
 check_nix_package "reattach-to-user-namespace" "reattach-to-user-namespace"

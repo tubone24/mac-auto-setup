@@ -33,11 +33,19 @@ else
   darwin-rebuild switch --flake ".#${HOSTNAME}"
 fi
 
+# 4. Install Claude Code (requires Node.js via fnm)
+echo ">>> Installing Claude Code..."
+eval "$(fnm env)"
+fnm install 22 --corepack-enabled 2>/dev/null || true
+fnm use 22
+npm install -g @anthropic-ai/claude-code
+echo ">>> Claude Code installed: $(claude --version)"
+
 echo ""
 echo "=== Setup complete! ==="
 echo ""
 echo "Post-setup steps:"
-echo "  1. Install Node.js versions:  fnm install 22 && fnm default 22"
+echo "  1. Set default Node.js:       fnm default 22"
 echo "  2. Install Python:            pyenv install 3.12 && pyenv global 3.12"
 echo "  3. Install Ruby:              rbenv install 3.3.0 && rbenv global 3.3.0"
 echo "  4. Initialize Rust:           rustup-init"

@@ -6,8 +6,7 @@
     awscli2
 
     # Infrastructure tools
-    packer
-    terraform
+    opentofu  # terraform-compatible OSS fork (terraform removed from nixpkgs due to BSL)
 
     # JSON/YAML tools
     jq
