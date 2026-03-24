@@ -13,7 +13,7 @@ echo ""
 # 1. Install Nix if not present
 if ! command -v nix &>/dev/null; then
   echo ">>> Installing Nix..."
-  curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+  curl -L https://nixos.org/nix/install | sh
   echo ">>> Nix installed. Please restart your shell and re-run this script."
   exit 0
 fi
