@@ -3,62 +3,61 @@ trigger:
 
 jobs:
 
-- job: Run_Ansible_and_Serverspec
+- job: Verify_Nix_Setup
   strategy:
     matrix:
-      # macMojave: # 動かない！
-      #   imageName: 'macOS-10.14'
-      # macCatalina:
-      #   imageName: 'macOS-10.15' 
-      macBigSur:
-        imageName: 'macOS-11' 
-        
+      macSonoma:
+        imageName: 'macOS-14'
+      macSequoia:
+        imageName: 'macOS-15'
+
   pool:
     vmImage: $(imageName)
+
+  timeoutInMinutes: 120
+
   steps:
   - script: |
-      # brew unlink python@3.9 # AzureのPythonを解除
-      # export PATH =  /usr/local/opt/python@3.9/libexec/bin:$PATH　
-      # brew link --overwrite python@3.9
-      # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
-      # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-      rm '/usr/local/bin/2to3'
-      brew --version
-      brew link --overwrite python@3.9
-      # pip3 install --user ansible
-      # ansible --version | grep "python version"
-      brew install ansible
-    displayName: 'Install Ansible'
-    
-  - script: |
-      rm -rf /usr/local/bin/node
-    displayName: 'Uninstall default node'
+      set -euo pipefail
+      echo ">>> Architecture: $(uname -m)"
+      echo ">>> macOS version: $(sw_vers -productVersion)"
+      # Use the official Nix multi-user installer (--no-daemon is no longer supported on macOS)
+      curl -L https://nixos.org/nix/install | sh -s -- --daemon --yes
+      echo ">>> Nix installed successfully"
+    displayName: 'Install Nix'
 
   - script: |
-      rm -rf /usr/local/bin/go
-    displayName: 'Uninstall default go'
-    
-  - script: |
-      rm -rf '/Applications/Google Chrome.app'
-    displayName: 'Uninstall Default Google Chrome'
+      . ci/nix-env.sh
+      nix --version
+      # Enable flakes and nix-command
+      mkdir -p ~/.config/nix
+      echo "experimental-features = nix-command flakes" > ~/.config/nix/nix.conf
+      echo ">>> Nix is available"
+    displayName: 'Verify Nix installation'
 
   - script: |
-      sudo spctl --master-disable
-    displayName: 'Disable Mac Gatekeeper'
-    
-    
-  - script: |
-      make setup-devtools TARGET=mac
-    displayName: 'Run Ansible devtools'
+      . ci/nix-env.sh
+      echo ">>> Evaluating flake configuration..."
+      nix eval .#darwinConfigurations.my-mac.system --json > /dev/null 2>&1 || \
+        nix eval .#darwinConfigurations.my-mac.config.system.build.toplevel --raw > /dev/null
+      echo ">>> Flake evaluation succeeded"
+    displayName: 'Evaluate Nix flake'
 
   - script: |
-      make setup-native-apps TARGET=mac
-    displayName: 'Run Ansible native-apps'
-    
-  - script: |
-      make before-check TARGET=mac
-    displayName: 'Before Run Serverspec'
+      . ci/nix-env.sh
+      echo ">>> Building nix-darwin system closure (this downloads/builds all Nix packages)..."
+      nix build .#darwinConfigurations.my-mac.system --no-link --print-build-logs 2>&1 | tail -50
+      echo ">>> System closure build succeeded"
+    displayName: 'Build system closure'
+    timeoutInMinutes: 90
 
   - script: |
-      make check TARGET=mac
-    displayName: 'Run Serverspec'
+      . ci/nix-env.sh
+      echo ">>> Verifying Nix packages are available..."
+      bash ci/verify-nix-packages.sh
+    displayName: 'Verify Nix packages'
+
+  - script: |
+      echo ">>> Verifying Homebrew cask/formula definitions..."
+      bash ci/verify-homebrew.sh
+    displayName: 'Verify Homebrew formulas and casks'

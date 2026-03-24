@@ -25,3 +25,17 @@ before-check:
 check:
 	@${CD_SERVERSPEC} && \
 	bundle exec rake
+
+# ---- Nix-based setup ----
+
+nix-setup:
+	./setup.sh my-mac
+
+nix-setup-x86:
+	./setup.sh my-mac-x86
+
+nix-switch:
+	darwin-rebuild switch --flake .#my-mac
+
+nix-update:
+	nix flake update
